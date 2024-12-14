@@ -1,19 +1,15 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\studentController;
-use App\Http\Controllers\StudentAdd;
-use App\Http\Controllers\StudentData;
-use App\Http\Controllers\DeleteStudent;
+use App\Http\Controllers\CategoryController;
 
-Route::get('/newstudent', [studentController::class, 'create'])->name('users.create');
-Route::get('/', [StudentData::class, 'show'])->name('users.show');
-Route::post('/register', [StudentAdd::class, 'store'])->name('users.create');
-// Route::post('/delete', [DeleteStudent::class, 'delete'])->name('users.delete');
-Route::post('/delete/{id}', [DeleteStudent::class, 'delete'])->name('users.delete');
-Route::get('/edit/{id}', [StudentAdd::class, 'edit'])->name('users.edit');
-Route::POST('/updatestudent/{id}', [StudentAdd::class, 'modifyData'])->name('users.edit');
-// In your routes/web.php or api.php
+Route::get('/', [CategoryController::class, 'index'])->name('categories.index');  // Display grid
+Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');  // Show create form
+Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');  // Store new category
+Route::get('/categories/{category}/edit', [CategoryController::class, 'edit'])->name('categories.edit');  // Show edit form
+Route::put('/categories/{category}', [CategoryController::class, 'update'])->name('categories.update');  // Update category
+Route::delete('/categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');  // Delete category
+
+
 
 
 
