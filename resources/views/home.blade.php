@@ -20,9 +20,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact-us">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('services') }}">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('contact') }}">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -110,58 +110,61 @@
 </section>
 
 
-    <!-- Testimonials Section (Modified to Include Address, Service Info, and Contact Form) -->
-    <section id="testimonials" class="testimonials py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">What Our Clients Say</h2>
-            <div class="row g-4">
-                <!-- Address Section -->
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <h5>Our Address</h5>
-                        <p>123 Main Street, Suite 456</p>
-                        <p>City, Country, ZIP Code</p>
-                    </div>
+
+<!-- Testimonials Section (Modified to Include Address, Service Info, and Contact Form) -->
+<section id="testimonials" class="testimonials py-5">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Address Section -->
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Our Address</h5>
+                    <p>123 Main Street, Suite 456</p>
+                    <p>City, Country, ZIP Code</p>
                 </div>
-                <!-- Service Section -->
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <h5>Our Services</h5>
-                        <ul>
-                            <li>Custom Software Development</li>
-                            <li>Web and Mobile Application</li>
-                            <li>Cloud Solutions</li>
-                        </ul>
-                    </div>
+            </div>
+            <!-- Service Section -->
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Our Services</h5>
+                    <ul>
+                        <li>Custom Software Development</li>
+                        <li>Web and Mobile Application</li>
+                        <li>Cloud Solutions</li>
+                    </ul>
                 </div>
-                <!-- Contact Form Section -->
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <h5>Contact Us</h5>
-                        <form action="#" method="post">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Your Phone Number" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="3" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
+            </div>
+            <!-- Contact Form Section -->
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Contact Us</h5>
+                    <form action="{{ route('contactus.store') }}" method="post">
+                @csrf
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone_number" placeholder="Your Phone Number" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="comment" rows="3" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
 
     <!-- Footer -->
     <footer id="footer" class="footer bg-dark text-white py-4">

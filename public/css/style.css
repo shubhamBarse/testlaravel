@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Simpler, more readable font */
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px; /* Space for fixed navbar */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Hero Section */
+.hero {
+    background: url('/images/back.jpg') no-repeat center center;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif; /* Modern and stylish font */
+    font-size: 4.8rem; /* Increased font size for clarity */
+    font-weight: 700;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7); /* Stronger text shadow */
+    color: #9b59b6; /* Deep purple */
+    margin-bottom: 10px;
+    letter-spacing: 5px; /* More spacing for readability */
+    line-height: 1.2; /* Tight line height for better flow */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+.hero p {
+    font-size: 1.7rem; /* Slightly larger font for better legibility */
+    color: #dfe6e9;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #2d2d2d 0%, #9b59b6 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+    background: linear-gradient(135deg, #9b59b6 0%, #2d2d2d 100%);
+}
+
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.6rem; /* Slightly larger font for visibility */
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Increased letter spacing for a bolder look */
+    position: relative;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+    transform: scale(1.1);
+    background-color: #8e44ad;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #212121;
+    text-align: center;
+    background: linear-gradient(135deg, #2d2d2d 0%, #9b59b6 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation for testimonials */
+}
+
+.testimonials h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem; /* Larger font for section header */
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Card styles */
+.testimonials .card {
+    background-color: #2d2d2d;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.testimonials .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.testimonials .card p {
+    color: #b2bec3;
+    font-size: 1.2rem; /* Slightly larger text for better readability */
+    line-height: 1.7;
+    font-family: 'Roboto', sans-serif; /* Clear font */
+}
+
+.testimonials .card img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.testimonials .card img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Footer Section */
+.footer {
+    background-color: #2d2d2d;
+    color: #9b59b6;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer a {
+    color: #dfe6e9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #9b59b6;
+}
+
+/* Buttons */
+button {
+    background-color: #9b59b6;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.2rem; /* Larger font for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #8e44ad;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3.2rem; /* Smaller for mobile */
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .testimonials h2 {
+        font-size: 2.2rem;
+    }
+
+    .testimonials .card {
+        margin: 15px auto;
+        padding: 20px;
+    }
+
+    .testimonials .card img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
