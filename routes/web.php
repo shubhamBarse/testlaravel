@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +38,16 @@ Route::get('/contact', function () {
 
 // Store Contact Us form data
 Route::post('/contact-us', [ContactUsController::class, 'store'])->name('contactus.store');
+
+// User Registration Route
+Route::post('/users', [UserController::class, 'store'])->name('users.store');
+
+// **Login Routes**
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login'); // Uncommented this line
+Route::post('login', [LoginController::class, 'login'])->name('login.submit');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+
 
 
 

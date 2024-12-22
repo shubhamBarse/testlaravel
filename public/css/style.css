@@ -236,6 +236,96 @@ button:hover {
 
 
 
+.modal-sm {
+    max-width: 320px; /* Set a specific smaller width for the modal */
+}
+
+/* Modal Content Styling */
+.modal-content {
+    border-radius: 15px; /* Smooth rounded corners */
+    background: linear-gradient(145deg, #1e1e2f, #2b2b3d); /* Subtle gradient in black and dark gray */
+    color: #ffffff; /* White text for contrast */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); /* Add depth with shadow */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Modal Header Styling */
+.modal-header {
+    text-align: center; /* Center align the title */
+    border-bottom: none; /* Remove default border */
+    background: #292942; /* Slightly lighter shade for the header */
+    padding: 20px;
+}
+
+.modal-title {
+    color: #8e44ad; /* Vibrant purple for the title */
+    font-size: 1.4rem; /* Increase title size */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.btn-close {
+    color: #ffffff; /* White close button */
+    opacity: 0.7;
+    font-size: 1rem;
+}
+
+.btn-close:hover {
+    opacity: 1; /* Highlight close button on hover */
+}
+
+/* Modal Body Styling */
+.modal-body {
+    padding: 25px; /* Add padding for better spacing */
+}
+
+/* Form Input Styling */
+.form-control {
+    background-color: #2b2b3d;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.form-control:focus {
+    border-color: #8e44ad; /* Purple border on focus */
+    box-shadow: 0 0 8px rgba(142, 68, 173, 0.5); /* Subtle purple glow */
+}
+
+/* Button Styling */
+.btn-primary {
+    background: #8e44ad;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #732d91;
+    box-shadow: 0 0 10px rgba(115, 45, 145, 0.7);
+}
+
+/* Centered Icon */
+.icon-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon-container i {
+    font-size: 3rem;
+    color: #8e44ad; /* Purple icon color */
+}
+
+
+
 
 
 
